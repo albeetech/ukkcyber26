@@ -15,6 +15,42 @@ Lab ini menyediakan dua aplikasi terpisah pada Ubuntu Server `192.168.50.10`:
 
 Lab sengaja rentan. Jalankan hanya pada VM khusus, jaringan terisolasi, dan target yang diizinkan. Jangan mempublikasikan port 8081 ke internet. Database Web Lab menggunakan SQLite di volume Docker dan seluruh data bersifat dummy.
 
+
+## Auto Setup Satu Perintah
+
+Untuk Ubuntu Server yang sudah memiliki IP `192.168.50.10/24`, jalankan:
+
+```bash
+chmod +x scripts/*.sh
+sudo ./scripts/auto-setup.sh \
+  --server-ip 192.168.50.10 \
+  --install-dir /opt/ukk-cyber-docker-lab
+```
+
+Script otomatis akan:
+
+1. memeriksa Ubuntu dan IP server;
+2. memasang Docker Engine serta Compose plugin dari repository resmi jika belum tersedia;
+3. membuat `.env`;
+4. menyiapkan permission log;
+5. memvalidasi Compose;
+6. build dan menjalankan kedua container;
+7. menunggu status `healthy`;
+8. membuat service `ukk-cyber-lab.service` agar lab aktif setelah reboot.
+
+Script **tidak mengubah Netplan/IP** dan **tidak mengaktifkan UFW**, karena keduanya dapat memutus akses SSH dan merupakan bagian dari task hardening UKK.
+
+Perintah pengelolaan:
+
+```bash
+sudo /opt/ukk-cyber-docker-lab/scripts/labctl.sh status
+sudo /opt/ukk-cyber-docker-lab/scripts/labctl.sh health
+sudo /opt/ukk-cyber-docker-lab/scripts/labctl.sh logs
+sudo /opt/ukk-cyber-docker-lab/scripts/labctl.sh reset
+```
+
+Panduan lengkap tersedia pada `AUTO-SETUP.md`.
+
 ## Persiapan Ubuntu
 
 Pastikan host memiliki IP:
