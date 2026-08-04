@@ -1,0 +1,1 @@
+Catatan audit dummy: validasi input, autentikasi, otorisasi, cookie, JWT, dan file handling.

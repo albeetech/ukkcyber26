@@ -1,0 +1,12 @@
+{% extends "base.html" %}{% block title %}Dashboard Lab{% endblock %}{% block content %}
+<div class="warn"><strong>Scope:</strong> Gunakan aplikasi ini hanya untuk latihan UKK pada target yang disediakan penguji.</div>
+<h2>Portal Pengujian Aplikasi</h2>
+<div class="grid">
+  <div class="card"><h3>Authentication</h3><p>Form login aplikasi lama dan API login berbasis JWT.</p><a href="/login">Buka modul</a></div>
+  <div class="card"><h3>Input Handling</h3><p>Fitur pencarian dan guestbook untuk menguji validasi input.</p><a href="/search">Buka pencarian</a></div>
+  <div class="card"><h3>API</h3><p>Endpoint profil dan administrator untuk pengujian otorisasi.</p><code>/api/profile/1</code></div>
+  <div class="card"><h3>File Service</h3><p>Layanan unduh dokumen simulasi.</p><code>/download?file=readme.txt</code></div>
+</div>
+<h2>Informasi Lab</h2>
+<table><tr><th>Komponen</th><th>Keterangan</th></tr><tr><td>Target</td><td>Web Lab port 8081</td></tr><tr><td>Data</td><td>Seluruh akun dan file bersifat dummy</td></tr><tr><td>Logging</td><td>Request dicatat untuk analisis Splunk</td></tr></table>
+{% endblock %}

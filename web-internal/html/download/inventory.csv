@@ -1,0 +1,4 @@
+asset_id,nama,ip,status
+SRV-01,Ubuntu Docker Host,192.168.50.10,aktif
+SOC-01,Splunk SOC,192.168.50.20,aktif
+RTR-01,MikroTik Security Gateway,192.168.50.1,aktif

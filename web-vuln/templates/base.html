@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>{% block title %}UKK Web Security Lab{% endblock %}</title>
+  <style>
+    :root{--navy:#172f55;--blue:#2475c7;--cyan:#16a3b6;--bg:#f2f6fb;--red:#c63c3c;--green:#27875a;--ink:#1b2938}
+    *{box-sizing:border-box}body{margin:0;background:var(--bg);font-family:Inter,Arial,sans-serif;color:var(--ink)}
+    header{background:linear-gradient(130deg,var(--navy),var(--blue));padding:24px 6%;color:white}header h1{margin:0}header p{margin:6px 0 0;opacity:.9}
+    nav{padding:12px 6%;background:white;display:flex;gap:18px;flex-wrap:wrap;box-shadow:0 3px 14px #17305014}nav a{font-weight:700;color:var(--navy);text-decoration:none}
+    main{max-width:1100px;margin:auto;padding:28px 6%}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+    .card{background:#fff;border-radius:15px;padding:20px;border:1px solid #dde8f3;box-shadow:0 8px 22px #17305012}.card h3{margin-top:0;color:var(--navy)}
+    input,textarea,button{width:100%;padding:11px;border:1px solid #bfd0e0;border-radius:8px;margin:7px 0;font:inherit}button{background:var(--blue);color:#fff;font-weight:800;border:0;cursor:pointer}
+    code,pre{background:#17212c;color:#eaf2fa;padding:3px 6px;border-radius:5px}pre{padding:14px;overflow:auto}.warn{background:#fff0e6;border-left:5px solid #ef7d31;padding:14px;border-radius:8px}.error{background:#feecec;color:#8c2525;padding:12px;border-radius:8px}.ok{color:var(--green)}
+    table{width:100%;border-collapse:collapse;background:#fff}th,td{padding:10px;border-bottom:1px solid #e0e8f0;text-align:left}th{background:var(--navy);color:#fff}
+    footer{text-align:center;padding:25px;color:#687889}
+  </style>
+</head>
+<body>
+<header><h1>UKK Web Security Lab</h1><p>Aplikasi sengaja rentan untuk pengujian legal pada jaringan terisolasi.</p></header>
+<nav><a href="/">Home</a><a href="/login">Login Lab</a><a href="/search">Search</a><a href="/comments">Guestbook</a><a href="/download?file=readme.txt">Download</a><a href="/admin/collector">Collector</a></nav>
+<main>{% block content %}{% endblock %}</main>
+<footer>Lab legal dan terisolasi • Seluruh data bersifat dummy • Jangan dipublikasikan ke internet</footer>
+</body></html>

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portal Internal Sekolah</title>
+  <style>
+    :root{--navy:#12355b;--blue:#1f77c9;--light:#eef5fb;--green:#2a8b57;--orange:#e57b25;--text:#1d2a38}
+    *{box-sizing:border-box} body{margin:0;font-family:Inter,Arial,sans-serif;background:#f4f7fb;color:var(--text)}
+    header{background:linear-gradient(135deg,var(--navy),var(--blue));color:#fff;padding:28px 7%}
+    header h1{margin:0;font-size:30px} header p{margin:8px 0 0;opacity:.88}
+    nav{background:#fff;padding:12px 7%;box-shadow:0 2px 12px #0c27451a;display:flex;gap:22px}
+    nav a{color:var(--navy);text-decoration:none;font-weight:700}
+    main{padding:28px 7%;max-width:1200px;margin:auto}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+    .card{background:#fff;border-radius:16px;padding:20px;box-shadow:0 8px 24px #12355b14;border:1px solid #e4edf6}
+    .card h3{margin:0 0 8px;color:var(--navy)}.badge{display:inline-block;padding:5px 10px;border-radius:999px;background:#e8f6ee;color:var(--green);font-weight:700;font-size:12px}
+    table{width:100%;border-collapse:collapse;background:#fff;border-radius:14px;overflow:hidden}th,td{padding:12px;border-bottom:1px solid #e8eef5;text-align:left}th{background:var(--navy);color:#fff}
+    .notice{margin:20px 0;padding:16px;border-left:5px solid var(--orange);background:#fff4e8;border-radius:8px}
+    footer{padding:25px 7%;color:#607080;text-align:center}
+  </style>
+</head>
+<body>
+<header>
+  <h1>Portal Internal Sekolah</h1>
+  <p>Layanan informasi, status infrastruktur, dan dokumen operasional internal.</p>
+</header>
+<nav>
+  <a href="/">Dashboard</a><a href="/status.html">Status Layanan</a><a href="/download/">Dokumen</a><a href="/admin/">Administrator</a>
+</nav>
+<main>
+  <div class="notice"><strong>Zona Internal:</strong> Portal ini hanya boleh diakses dari jaringan klien dan administrator sekolah.</div>
+  <div class="grid">
+    <section class="card"><span class="badge">ONLINE</span><h3>Server Akademik</h3><p>Layanan web dan database operasional berjalan normal.</p></section>
+    <section class="card"><span class="badge">ONLINE</span><h3>Monitoring</h3><p>Pengiriman log ke SOC aktif dan diperiksa berkala.</p></section>
+    <section class="card"><span class="badge">TERJADWAL</span><h3>Backup</h3><p>Backup konfigurasi dilakukan setiap akhir hari.</p></section>
+    <section class="card"><span class="badge">INTERNAL</span><h3>Dokumen</h3><p>Dokumen jaringan hanya untuk kebutuhan staf berwenang.</p></section>
+  </div>
+  <h2>Ringkasan Infrastruktur</h2>
+  <table>
+    <tr><th>Layanan</th><th>Alamat</th><th>Status</th><th>Pemilik</th></tr>
+    <tr><td>Web Internal</td><td>192.168.50.10:8080</td><td>Aktif</td><td>Tim Infrastruktur</td></tr>
+    <tr><td>Web Security Lab</td><td>192.168.50.10:8081</td><td>Terisolasi</td><td>Tim Cybersecurity</td></tr>
+    <tr><td>Splunk SOC</td><td>192.168.50.20:8000</td><td>Aktif</td><td>Tim SOC</td></tr>
+  </table>
+</main>
+<footer>SMKN 1 Nglegok • Portal Internal Simulasi UKK • Seluruh data bersifat dummy</footer>
+</body>
+</html>

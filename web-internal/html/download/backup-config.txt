@@ -1,0 +1,7 @@
+# FILE DUMMY UNTUK AUDIT UKK - BUKAN DATA PRODUKSI
+APP_NAME=Portal Internal Sekolah
+DB_HOST=db-internal.local
+DB_USER=portal_demo
+DB_PASSWORD=Dummy-Only-Change-Me
+BACKUP_PATH=/srv/backup/portal
+JWT_NOTE=tidak digunakan oleh Web Internal

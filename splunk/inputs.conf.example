@@ -1,0 +1,22 @@
+# Contoh konfigurasi Splunk Universal Forwarder pada Ubuntu host.
+# Sesuaikan path absolut dengan lokasi repository.
+
+[monitor:///opt/ukk-cyber-docker-lab/logs/web-internal/access.log]
+index = ukk
+sourcetype = nginx:access:internal
+host = srv-ukk-cyber
+
+[monitor:///opt/ukk-cyber-docker-lab/logs/web-internal/error.log]
+index = ukk
+sourcetype = nginx:error:internal
+host = srv-ukk-cyber
+
+[monitor:///opt/ukk-cyber-docker-lab/logs/web-vuln/access.jsonl]
+index = ukk
+sourcetype = ukk:web:vuln:json
+host = srv-ukk-cyber
+
+[monitor:///opt/ukk-cyber-docker-lab/logs/web-vuln/collector.log]
+index = ukk
+sourcetype = ukk:web:collector:json
+host = srv-ukk-cyber
