@@ -70,13 +70,11 @@ services:
 networks:
   internal_net:
     driver: bridge
-    internal: true
     ipam:
       config:
         - subnet: 172.31.50.0/24
   vuln_net:
     driver: bridge
-    internal: true
     ipam:
       config:
         - subnet: 172.31.60.0/24
